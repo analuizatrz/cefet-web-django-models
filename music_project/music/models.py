@@ -32,4 +32,4 @@ class Banda(models.Model):
 	em_atividade = models.IntegerField(choices = banda_choices, default = 0)
 
 	def __str__(self):
-		return "{nome} \ncriada em {data_de_criacao} \nEstilo: {estilo} \nMusicos: {musicos}".format(nome=self.nome, data_de_criacao=self.data_de_criacao, estilo=self.estilo, musicos = ", ".join([m for m in self.musicos]))
+		return "{nome} \ncriada em {data_de_criacao} \nEstilo: {estilo} \n".format(nome=self.nome, data_de_criacao=self.data_de_criacao, estilo=self.estilo)
